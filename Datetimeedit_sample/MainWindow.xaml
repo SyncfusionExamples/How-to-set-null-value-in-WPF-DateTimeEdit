@@ -1,0 +1,18 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Datetimeedit_sample"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="Datetimeedit_sample.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <syncfusion:DateTimeEdit x:Name="dateTimeEdit" Height="23" 
+                                 Text="DateTimeEdit" TextWrapping="Wrap" Width="150"
+                                 IsEmptyDateEnabled="True" IsVisibleRepeatButton="True"
+                                 NullValue="{x:Null}" NoneDateText="No date is selected" ShowMaskOnNullValue="False" />
+
+    </Grid>
+</Window>
