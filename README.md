@@ -1,2 +1,6 @@
 # How-to-set-null-value-in-WPF-DateTimeEdit
-This repository contains the sample that how to set the null value in WPF DateTimeEdit control.
+This repository provides a detailed example of how to set a **null value** in the **WPF DateTimeEdit** control, which is part of the Syncfusion WPF suite. By default, the DateTimeEdit control requires a valid date and time value, but in many real-world scenarios, you may want to allow users to clear the value or represent an empty state. This is especially useful in forms where the date field is optional or when you need to reset the control programmatically.
+
+The sample demonstrates how to configure the DateTimeEdit control to accept null values by customizing its properties and handling specific events. This approach ensures that the control behaves consistently when the user clears the input or when the application logic sets the value to null. You will learn how to set the value to null, and ensure proper UI updates without breaking the control’s functionality.
+
+This guide walks you through customizing the control behavior using event handlers and properties, making your WPF application more flexible and user-friendly.
