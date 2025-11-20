@@ -1,6 +1,46 @@
-# How-to-set-null-value-in-WPF-DateTimeEdit
-This repository provides a detailed example of how to set a **null value** in the **WPF DateTimeEdit** control, which is part of the Syncfusion WPF suite. By default, the DateTimeEdit control requires a valid date and time value, but in many real-world scenarios, you may want to allow users to clear the value or represent an empty state. This is especially useful in forms where the date field is optional or when you need to reset the control programmatically.
+# How to Set Null Value in WPF DateTimeEdit
+This example demonstrates how to allow null values in the Syncfusion WPF DateTimeEdit control. By default, DateTimeEdit requires a valid date and time value, but in many real-world scenarios, you may want to allow users to clear the value or represent an empty state. This is especially useful in forms where the date field is optional or when you need to reset the control programmatically.
 
-The sample demonstrates how to configure the DateTimeEdit control to accept null values by customizing its properties and handling specific events. This approach ensures that the control behaves consistently when the user clears the input or when the application logic sets the value to null. You will learn how to set the value to null, and ensure proper UI updates without breaking the control’s functionality.
+## Why This Is Useful
+- **Optional Fields**: Ideal for forms where date selection is not mandatory.
+- **Reset Functionality**: Allows clearing the date programmatically.
+- **Better UX**: Displays custom text when no date is selected.
 
-This guide walks you through customizing the control behavior using event handlers and properties, making your WPF application more flexible and user-friendly.
+## Key Properties
+- **IsEmptyDateEnabled**: Enables empty date selection.
+- **NullValue**: Represents the null state.
+- **NoneDateText**: Custom text displayed when no date is selected.
+- **ShowMaskOnNullValue**: Controls whether the mask is shown when the value is null.
+
+## Code Example
+**XAML**
+```XAML
+<syncfusion:DateTimeEdit x:Name="dateTimeEdit"
+                         Height="23"
+                         Width="150"
+                         IsEmptyDateEnabled="True"
+                         IsVisibleRepeatButton="True"
+                         NullValue="{x:Null}"
+                         NoneDateText="No date is selected"
+                         ShowMaskOnNullValue="False" />
+```
+
+**C#**
+```C#
+DateTimeEdit dateTime = new DateTimeEdit
+{
+    Height = 25,
+    Width = 150,
+    IsEmptyDateEnabled = true,
+    IsVisibleRepeatButton = true,
+    NullValue = null,
+    NoneDateText = "No date is selected",
+    ShowMaskOnNullValue = false
+};
+
+this.Content = dateTime;
+```
+
+## Output
+
+![Null value in WPF DateTimeEdit](output.png)
